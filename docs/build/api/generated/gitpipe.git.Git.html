@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>gitpipe.git.Git &#8212; gitpipe 0.0.6 documentation</title>
+    <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="gitpipe.git" href="../git.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../git.html" title="gitpipe.git"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">gitpipe 0.0.6 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../git.html" accesskey="U">gitpipe.git</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="gitpipe-git-git">
+<h1>gitpipe.git.Git<a class="headerlink" href="#gitpipe-git-git" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="gitpipe.git.Git">
+<em class="property">class </em><code class="sig-prename descclassname">gitpipe.git.</code><code class="sig-name descname">Git</code><span class="sig-paren">(</span><em class="sig-param">cwd='.'</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/gitpipe/git.html#Git"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitpipe.git.Git" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class allows one to upload and retrieve files from a git repository</p>
+<dl class="method">
+<dt id="gitpipe.git.Git.add">
+<code class="sig-name descname">add</code><span class="sig-paren">(</span><em class="sig-param">filename=''</em>, <em class="sig-param">options=''</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/gitpipe/git.html#Git.add"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitpipe.git.Git.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add files to the git repository</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Name of file to add (Default: ‘’)</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Additional options (Default: ‘’)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="gitpipe.git.Git.checkout">
+<code class="sig-name descname">checkout</code><span class="sig-paren">(</span><em class="sig-param">branch</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/gitpipe/git.html#Git.checkout"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitpipe.git.Git.checkout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checkout a branch</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>branch</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Branch to checkout</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="gitpipe.git.Git.commit">
+<code class="sig-name descname">commit</code><span class="sig-paren">(</span><em class="sig-param">message=''</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/gitpipe/git.html#Git.commit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitpipe.git.Git.commit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Commit files to the git repository</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Commit message</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="gitpipe.git.Git.get_branch">
+<code class="sig-name descname">get_branch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/gitpipe/git.html#Git.get_branch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitpipe.git.Git.get_branch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the name of the current branch</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Name of current branch</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="gitpipe.git.Git.merge">
+<code class="sig-name descname">merge</code><span class="sig-paren">(</span><em class="sig-param">branch</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/gitpipe/git.html#Git.merge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitpipe.git.Git.merge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge <cite>branch</cite> to current</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>branch</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Branch to merge</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="gitpipe.git.Git.push">
+<code class="sig-name descname">push</code><span class="sig-paren">(</span><em class="sig-param">remote='origin'</em>, <em class="sig-param">branch='master'</em>, <em class="sig-param">options=''</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/gitpipe/git.html#Git.push"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitpipe.git.Git.push" title="Permalink to this definition">¶</a></dt>
+<dd><p>Push committed files in <cite>branch</cite> to <cite>remote</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>remote</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Remote (Default: ‘origin’)</p></li>
+<li><p><strong>branch</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Branch (Default: ‘master’)</p></li>
+<li><p><strong>options</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Additional options (Default: ‘’)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="gitpipe.git.Git.tag">
+<code class="sig-name descname">tag</code><span class="sig-paren">(</span><em class="sig-param">tag</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/gitpipe/git.html#Git.tag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitpipe.git.Git.tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tag the commit</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tag</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – Tag</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="gitpipe.git.Git.which">
+<code class="sig-name descname">which</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/gitpipe/git.html#Git.which"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gitpipe.git.Git.which" title="Permalink to this definition">¶</a></dt>
+<dd><p>Which git executable are we using?</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../git.html"
+                        title="previous chapter">gitpipe.git</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/api/generated/gitpipe.git.Git.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../git.html" title="gitpipe.git"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">gitpipe 0.0.6 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../git.html" >gitpipe.git</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, gitpipe developers.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.0.
+    </div>
+  </body>
+</html>
