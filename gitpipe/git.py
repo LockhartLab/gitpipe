@@ -5,6 +5,7 @@ author: C. Lockhart <chris@lockhartlab.org>
 """
 
 import subprocess
+import sys
 
 # Contents
 __all__ = [
@@ -13,7 +14,7 @@ __all__ = [
 
 
 # Class to help with git version control
-# TODO clean up this method
+# TODO clean up this method, _execute could be written more elegantly
 class Git:
     """
     This class allows one to upload and retrieve files from a git repository
@@ -163,5 +164,11 @@ class Git:
         Which git executable are we using?
         """
 
-        # TODO depending on dos or linux, use where or which
-        self._execute('where git')
+        # If we use Windows, we can get the location with where; otherwise, use which
+        if sys.platform == 'win32':
+            cmd = 'where git'
+        else:
+            cmd = 'which git'
+
+        # Execute the command
+        return self._execute(cmd, output=True)
