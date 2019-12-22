@@ -16,8 +16,8 @@ version_dict = dict([element.split(': ') for element in data])
 version = '.'.join([str(version_dict[key]) for key in ['major', 'minor', 'patch']])
 
 # Read in requirements.txt
-with open('requirements.txt', 'r') as f:
-    requirements = f.read().splitlines()
+# with open('requirements.txt', 'r') as f:
+#     requirements = f.read().splitlines()
 
 # Setup
 setup(
@@ -32,7 +32,7 @@ setup(
     packages=[
         'gitpipe',
     ],
-    install_requires=requirements,
+    install_requires=[],
     include_package_data=True,
     zip_safe=True
 )
