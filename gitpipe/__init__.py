@@ -4,6 +4,6 @@ from .version import __version__
 
 # Contents
 __all__ = [
-    'git',
+    'Git',
     '__version__'
 ]
