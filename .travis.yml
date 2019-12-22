@@ -3,7 +3,8 @@ language: python
 python: 3.7
 
 # run all gitpipe tests
-#script:
+script:
+  - echo 0
 #  - cp gitpipe/tests/test.py .
 #  - python -m coverage run test.py
 #  - rm test.py

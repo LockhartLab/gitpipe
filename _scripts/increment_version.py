@@ -25,8 +25,8 @@ def increment_version():
     # Transform version dict to string
     version = '.'.join([str(version[key]) for key in ['major', 'minor', 'patch']])
 
-    # Write version string to izzy/_version.py
-    with open('izzy/version.py', 'w') as f:
+    # Write version string to gitpipe/_version.py
+    with open('gitpipe/version.py', 'w') as f:
         f.write("__version__ = '{}'\n".format(version))
 
     # Return
