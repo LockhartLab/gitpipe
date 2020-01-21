@@ -117,7 +117,7 @@ class Git:
         return self._execute('git rev-parse --abbrev-ref HEAD', output=True)
 
     # Merge branch to the current one
-    def merge(self, branch):
+    def merge(self, branch, options=''):
         """
         Merge `branch` to current
 
@@ -125,9 +125,11 @@ class Git:
         ----------
         branch : str
             Branch to merge
+        options : str
+            (Optional) arguments (Default: '')
         """
 
-        self._execute('git merge {}'.format(branch))
+        self._execute('git merge {0} {1}'.format(branch, options))
 
     # Push branch to remote
     def push(self, remote='origin', branch='master', options=''):
@@ -141,10 +143,10 @@ class Git:
         branch : str
             Branch (Default: 'master')
         options : str
-            Additional options (Default: '')
+            (Optional) arguments (Default: '')
         """
 
-        self._execute('git push {0} {1} {2}'.format(options, remote, branch))
+        self._execute('git push {0} {1} {2}'.format(remote, branch, options))
 
     # Tag the commit
     def tag(self, tag):
