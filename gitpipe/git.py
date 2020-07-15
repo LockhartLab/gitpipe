@@ -57,6 +57,8 @@ class Git:
         # Run the command and wait for it to finish
         process = subprocess.Popen(cmd, stdout=subprocess.PIPE, cwd=self.cwd, shell=True)
         process.wait()
+        if process.poll() != 0:
+            raise RuntimeError('error with gitpipe')
 
         # Output?
         if output:
@@ -132,7 +134,7 @@ class Git:
         self._execute('git merge {0} {1}'.format(branch, options))
 
     # Push branch to remote
-    def push(self, remote='origin', branch='master', options=''):
+    def push(self, remote='origin', branch='master', options=None):
         """
         Push committed files in `branch` to `remote`
 
@@ -145,6 +147,9 @@ class Git:
         options : str
             (Optional) arguments (Default: '')
         """
+
+        if options is None:
+            options = ''
 
         self._execute('git push {0} {1} {2}'.format(remote, branch, options))
 
