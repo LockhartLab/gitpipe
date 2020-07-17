@@ -4,7 +4,7 @@ written in Python3
 author: C. Lockhart <chris@lockhartlab.org>
 """
 
-import subprocess
+from subprocess import Popen, PIPE
 import sys
 
 # Contents
@@ -55,10 +55,10 @@ class Git:
             print(cmd)
 
         # Run the command and wait for it to finish
-        process = subprocess.Popen(cmd, stdout=subprocess.PIPE, cwd=self.cwd, shell=True)
+        process = Popen(cmd, stdout=PIPE, stderr=PIPE, cwd=self.cwd, shell=True)
         process.wait()
         if process.poll() != 0:
-            raise RuntimeError('error with gitpipe')
+            raise RuntimeError('error with gitpipe: %s' % process.stderr)
 
         # Output?
         if output:
