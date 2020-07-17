@@ -58,7 +58,7 @@ class Git:
         process = Popen(cmd, stdout=PIPE, stderr=PIPE, cwd=self.cwd, shell=True)
         process.wait()
         if process.poll() != 0:
-            raise RuntimeError('error with gitpipe: %s' % process.stderr)
+            raise RuntimeError('error with gitpipe: %s' % process.communicate()[1].strip().decode('UTF-8'))
 
         # Output?
         if output:
